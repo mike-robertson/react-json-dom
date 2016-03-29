@@ -1,0 +1,39 @@
+{
+  "name": "react-json-dom",
+  "version": "0.0.0",
+  "description": "A simple component which takes in an object and shows it in json format",
+  "main": "lib/jsonComponent.js",
+  "devDependencies": {
+    "babel": "^6.1.18",
+    "babel-cli": "^6.6.5",
+    "babel-core": "^6.2.1",
+    "babel-plugin-add-module-exports": "^0.1.2",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-react": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "chai": "^3.5.0",
+    "cheerio": "^0.20.0",
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-mocha": "^2.2.0",
+    "gulp-open": "^1.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "jsdom": "^7.0.2",
+    "mocha": "^2.3.4",
+    "mocha-jsdom": "^1.0.0",
+    "react": "^0.14.3",
+    "react-addons-test-utils": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "test": "mocha test/**/*.spec.js --compilers js:babel-core/register --recursive",
+    "compile": "babel ./components --out-dir ./lib --source-maps --presets es2015,react --plugins babel-plugin-add-module-exports"
+  },
+  "license": "MIT",
+  "keywords": [
+    "json",
+    "react-component"
+  ]
+}
