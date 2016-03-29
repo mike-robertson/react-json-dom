@@ -2,6 +2,8 @@
 
 A simple component which you can use to show what json looks like.
 
+![Demo screenshot](/img/demo.png?raw=true "Demo")
+
 ```javascript
 import JsonTree from 'react-json-dom';
 
