@@ -3,7 +3,7 @@
 A simple component which you can use to show what json looks like.
 
 ```javascript
-import JsonTree from 'json-tree';
+import JsonTree from 'react-json-dom';
 
 let testObj = {
   arg1: 'val1',
