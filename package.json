@@ -1,6 +1,6 @@
 {
   "name": "react-json-dom",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A simple component which takes in an object and shows it in json format",
   "main": "lib/jsonComponent.js",
   "devDependencies": {
@@ -35,5 +35,9 @@
   "keywords": [
     "json",
     "react-component"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mike-robertson/react-json-dom.git"
+  }
 }
