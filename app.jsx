@@ -21,7 +21,8 @@ const exampleObject = {
       val422: 'test2'
     },
     'val3'
-  ]
+  ],
+  arg5: '5'
 }
 
 render(

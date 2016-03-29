@@ -3,7 +3,7 @@ import React, {PropTypes} from 'react';
 const JsonArg = (props) => {
 
   const objStyle = {
-    color: 'maroon',
+    color: '#D2D6D6',
     listStyleType: 'none',
     fontWeight: 'bold'
   };
@@ -14,13 +14,13 @@ const JsonArg = (props) => {
   };
 
   const stringStyle = {
-    color: 'green',
+    color: '#65CF75',
     listStyleType: 'none',
     fontWeight: 'normal'
   };
 
   const numStyle = {
-    color: 'purple',
+    color: '#CFAA65',
     listStyleType: 'none',
     fontWeight: 'normal'
   };
@@ -30,7 +30,7 @@ const JsonArg = (props) => {
   };
 
   const puncStyle = {
-    color: 'black',
+    color: '#D2D6D6',
     fontWeight: 'normal'
   };
 
@@ -45,23 +45,27 @@ const JsonArg = (props) => {
   };
 
   const getOpenBrace = (obj) => {
-    console.log('[', obj, Array.isArray(obj))
     return Array.isArray(obj) ? '[' : '{';
   };
 
   const getCloseBrace = (obj) => {
-    console.log(']', obj, Array.isArray(obj))
-    return Array.isArray(obj) ? ']' : '}';
+    return Array.isArray(obj) ? '],' : '},';
   };
 
   return (
     <li style={getStyle(props.obj)}>
-      {props.val}: {
-        isObject(props.obj[props.val])
+      {props.val ? props.val + ':' : ''} {
+        props.val
+        ? isObject(props.obj[props.val])
           ? <span style={puncStyle}>{getOpenBrace(props.obj[props.val])}
               <div>{props.children}<span>{getCloseBrace(props.obj[props.val])}</span></div>
             </span>
           : <span style={getStyle(props.obj[props.val])}>{wrapChar(props.obj[props.val])}</span>
+        : isObject(props.obj)
+          ? <span style={puncStyle}>{getOpenBrace(props.obj)}
+              <div>{props.children}<span>{getCloseBrace(props.obj)}</span></div>
+            </span>
+          : <span style={getStyle(props.obj)}>{wrapChar(props.obj)}</span>
       }
     </li>
   );

@@ -10,6 +10,7 @@ gulp.task('babelify', function () {
   return browserify({
     extensions: ['.jsx', '.js'],
     entries: './app.jsx',
+    debug: true
   })
     .transform(babelify.configure({ ignore: /(node_modules)/ }))
     .bundle()
